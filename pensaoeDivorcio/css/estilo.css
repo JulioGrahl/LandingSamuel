@@ -1,0 +1,924 @@
+/* ===== VARIÁVEIS (MANTIDAS) ===== */
+:root {
+    --bege-claro: #DDD3D1;
+    --azul-petroleo: #2F3E46;
+    --dourado-met: #C6A65B;
+    --dourado-escuro: #9C7C3A;
+    --cinza-medio: #8E8A87;
+    --branco: #FFFFFF;
+    --preto-suave: #333333;
+}
+
+/* ===== RESET E BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--preto-suave);
+    background-color: var(--branco);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== CABEÇALHO (MANTIDO) ===== */
+.cabecalho {
+    background-color: var(--branco);
+    border-bottom: 1px solid var(--bege-claro);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.cabecalho-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo-img {
+    max-height: 60px;
+    width: auto;
+}
+
+.menu-principal ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: var(--azul-petroleo);
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.menu-principal a:hover {
+    color: var(--dourado-met);
+}
+
+.btn-contato-header {
+    background-color: var(--dourado-met);
+    color: var(--branco) !important;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.btn-contato-header:hover {
+    background-color: var(--dourado-escuro);
+    color: var(--branco);
+}
+
+/* ===== BOTÕES (MANTIDOS) ===== */
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.btn-whatsapp:hover {
+    background-color: #20b859;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-secundario {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--azul-petroleo);
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 500;
+    border: 1px solid var(--azul-petroleo);
+    transition: all 0.2s;
+}
+
+.btn-secundario:hover {
+    background-color: var(--azul-petroleo);
+    color: var(--branco);
+}
+
+.btn-grande {
+    padding: 18px 50px;
+    font-size: 1.3rem;
+}
+
+/* ===== HERO FAMÍLIA (NOVO) ===== */
+.hero-familia {
+    padding: 60px 0;
+    background: linear-gradient(135deg, var(--bege-claro) 0%, #F5F0ED 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-familia::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: rgba(198, 166, 91, 0.03);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero-familia-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.hero-familia-tag {
+    display: inline-block;
+    background: rgba(198, 166, 91, 0.1);
+    color: var(--dourado-escuro);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(198, 166, 91, 0.3);
+}
+
+.hero-familia-conteudo h1 {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    color: var(--azul-petroleo);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.destaque-dourado {
+    color: var(--dourado-met);
+    border-bottom: 2px solid var(--dourado-escuro);
+    display: inline-block;
+}
+
+.hero-familia-texto {
+    font-size: 1.2rem;
+    color: var(--cinza-medio);
+    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.hero-familia-cta {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.depoimento-card {
+    background: var(--branco);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(47, 62, 70, 0.1);
+    border: 1px solid var(--bege-claro);
+    position: relative;
+}
+
+.depoimento-card i {
+    font-size: 2rem;
+    color: var(--dourado-met);
+    opacity: 0.3;
+    margin-bottom: 15px;
+}
+
+.depoimento-card p {
+    font-size: 1.1rem;
+    color: var(--azul-petroleo);
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.depoimento-autor {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.depoimento-foto {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--dourado-met);
+}
+
+.depoimento-autor div {
+    display: flex;
+    flex-direction: column;
+}
+
+.depoimento-autor strong {
+    color: var(--azul-petroleo);
+    font-size: 1rem;
+}
+
+.depoimento-autor span {
+    color: var(--cinza-medio);
+    font-size: 0.9rem;
+}
+
+.hero-familia-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 0 0;
+    border-top: 1px solid rgba(198, 166, 91, 0.2);
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-numero {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--dourado-met);
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    color: var(--cinza-medio);
+}
+
+/* ===== SOBRE FAMÍLIA (NOVO) ===== */
+.sobre-familia {
+    padding: 80px 0;
+    background: var(--branco);
+}
+
+.sobre-familia-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.sobre-familia-header h2 {
+    font-size: 2.5rem;
+    color: var(--azul-petroleo);
+    margin-bottom: 15px;
+}
+
+.sobre-familia-header p {
+    font-size: 1.2rem;
+    color: var(--cinza-medio);
+}
+
+.sobre-familia-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.sobre-familia-card {
+    text-align: center;
+    padding: 40px 30px;
+    background: #F9F7F6;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.sobre-familia-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--dourado-met);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+.sobre-familia-icone {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: rgba(198, 166, 91, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobre-familia-icone i {
+    font-size: 32px;
+    color: var(--dourado-met);
+}
+
+.sobre-familia-card h3 {
+    font-size: 1.5rem;
+    color: var(--azul-petroleo);
+    margin-bottom: 15px;
+}
+
+.sobre-familia-card p {
+    color: var(--cinza-medio);
+    line-height: 1.6;
+}
+
+/* ===== ÁREAS DE ATUAÇÃO (GRID 2x2) ===== */
+.areas-atuacao {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--bege-claro) 0%, #F5F0ED 100%);
+}
+
+.areas-atuacao-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.areas-tag {
+    display: inline-block;
+    color: var(--dourado-escuro);
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.areas-atuacao-header h2 {
+    font-size: 2.5rem;
+    color: var(--azul-petroleo);
+}
+
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.area-item {
+    background: var(--branco);
+    padding: 35px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.area-item:hover {
+    border-color: var(--dourado-met);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.area-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: rgba(198, 166, 91, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.area-icon-wrapper i {
+    font-size: 28px;
+    color: var(--dourado-met);
+}
+
+.area-item h3 {
+    font-size: 1.5rem;
+    color: var(--azul-petroleo);
+    margin-bottom: 10px;
+}
+
+.area-item p {
+    color: var(--cinza-medio);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.area-saiba-mais {
+    color: var(--dourado-met);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.3s ease;
+}
+
+.area-saiba-mais:hover {
+    gap: 12px;
+    color: var(--dourado-escuro);
+}
+
+/* ===== PROCESSO (TIMELINE VERTICAL) ===== */
+.processo-familia {
+    padding: 80px 0;
+    background: var(--branco);
+}
+
+.processo-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--azul-petroleo);
+    margin-bottom: 50px;
+}
+
+.processo-linha {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.processo-linha::before {
+    content: '';
+    position: absolute;
+    left: 29px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--dourado-met), var(--dourado-escuro));
+}
+
+.processo-item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.processo-marcador {
+    width: 60px;
+    height: 60px;
+    background: var(--dourado-met);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--branco);
+    font-weight: 700;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 5px 15px rgba(198, 166, 91, 0.3);
+}
+
+.processo-conteudo {
+    flex: 1;
+    padding: 15px 0;
+}
+
+.processo-conteudo h3 {
+    font-size: 1.4rem;
+    color: var(--azul-petroleo);
+    margin-bottom: 8px;
+}
+
+.processo-conteudo p {
+    color: var(--cinza-medio);
+    line-height: 1.6;
+}
+
+/* ===== CALCULADORA DE PENSÃO ===== */
+.calculadora-pensao {
+    padding: 80px 0;
+    background: #F9F7F6;
+}
+
+.calculadora-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.calculadora-tag {
+    display: inline-block;
+    color: var(--dourado-escuro);
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.calculadora-info h2 {
+    font-size: 2.2rem;
+    color: var(--azul-petroleo);
+    margin-bottom: 20px;
+}
+
+.calculadora-info p {
+    color: var(--cinza-medio);
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+.calculadora-lista {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.calculadora-lista li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    color: var(--azul-petroleo);
+}
+
+.calculadora-lista i {
+    color: var(--dourado-met);
+    font-size: 1.1rem;
+}
+
+.calculadora-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card-pensao {
+    background: var(--branco);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid var(--bege-claro);
+    transition: all 0.3s ease;
+}
+
+.card-pensao:hover {
+    border-color: var(--dourado-met);
+    transform: scale(1.02);
+}
+
+.card-pensao i {
+    font-size: 32px;
+    color: var(--dourado-met);
+    margin-bottom: 12px;
+}
+
+.card-pensao h4 {
+    font-size: 1.1rem;
+    color: var(--azul-petroleo);
+    margin-bottom: 8px;
+}
+
+.card-pensao p {
+    font-size: 0.9rem;
+    color: var(--cinza-medio);
+}
+
+/* ===== DÚVIDAS FAMÍLIA (TABS) ===== */
+.duvidas-familia {
+    padding: 80px 0;
+    background: var(--branco);
+}
+
+.duvidas-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--azul-petroleo);
+    margin-bottom: 40px;
+}
+
+.duvidas-tabs {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tabs-header {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--bege-claro);
+    padding-bottom: 10px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--cinza-medio);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+}
+
+.tab-btn:hover {
+    color: var(--dourado-met);
+}
+
+.tab-btn.ativo {
+    background: var(--dourado-met);
+    color: var(--branco);
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.ativo {
+    display: block;
+}
+
+.faq-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faq-item {
+    padding: 25px;
+    background: #F9F7F6;
+    border-radius: 12px;
+    border-left: 4px solid var(--dourado-met);
+}
+
+.faq-item h4 {
+    font-size: 1.2rem;
+    color: var(--azul-petroleo);
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    color: var(--cinza-medio);
+    line-height: 1.6;
+}
+
+/* ===== CASOS REAIS ===== */
+.casos-reais {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--bege-claro) 0%, #F5F0ED 100%);
+}
+
+.casos-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--azul-petroleo);
+    margin-bottom: 50px;
+}
+
+.casos-reais-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.caso-real-card {
+    background: var(--branco);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease;
+}
+
+.caso-real-card:hover {
+    transform: translateY(-5px);
+}
+
+.caso-real-header {
+    background: var(--azul-petroleo);
+    padding: 15px 20px;
+}
+
+.caso-real-categoria {
+    color: var(--dourado-met);
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.caso-real-descricao {
+    padding: 25px 20px;
+    color: var(--azul-petroleo);
+    font-style: italic;
+    line-height: 1.6;
+    min-height: 120px;
+}
+
+.caso-real-resultado {
+    padding: 15px 20px;
+    border-top: 1px solid var(--bege-claro);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--dourado-escuro);
+    font-weight: 500;
+}
+
+.caso-real-resultado i {
+    color: var(--dourado-met);
+}
+
+/* ===== CTA FINAL FAMÍLIA ===== */
+.cta-final-familia {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--azul-petroleo) 0%, #1F2E35 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-final-familia::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(198, 166, 91, 0.1) 0%, transparent 50%);
+}
+
+.cta-final-conteudo {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--branco);
+    position: relative;
+    z-index: 2;
+}
+
+.cta-final-conteudo h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.cta-final-conteudo p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.cta-final-botoes {
+    text-align: center;
+}
+
+.cta-final-nota {
+    font-size: 1rem;
+    opacity: 0.7;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* ===== RODAPÉ (MANTIDO) ===== */
+.rodape {
+    background-color: var(--azul-petroleo);
+    color: var(--branco);
+    padding: 40px 0;
+    border-top: 3px solid var(--dourado-met);
+}
+
+.rodape-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.rodape-info p {
+    margin-bottom: 5px;
+    opacity: 0.9;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.6;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+}
+
+/* ===== WHATSAPP FLOAT (MANTIDO) ===== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #20b859;
+}
+
+.whatsapp-float img {
+    width: 32px;
+    height: 32px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 992px) {
+    .sobre-familia-grid,
+    .areas-grid,
+    .casos-reais-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero-familia-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .calculadora-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobre-familia-grid,
+    .areas-grid,
+    .casos-reais-grid,
+    .calculadora-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-familia-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .tabs-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .tab-btn {
+        text-align: center;
+    }
+    
+    .processo-linha::before {
+        left: 19px;
+    }
+    
+    .processo-marcador {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .menu-principal {
+        display: none;
+    }
+    
+    .cabecalho {
+        display: flex;
+        height: 70px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .cabecalho-flex {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .menu-principal ul {
+        gap: 20px;
+    }
+    
+    .cta-final-conteudo h2 {
+        font-size: 2rem;
+    }
+}
