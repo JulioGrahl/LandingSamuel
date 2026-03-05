@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- HEADER COM LOGO (mantido) -->
+    <!-- HEADER COM LOGO -->
     <header class="cabecalho">
         <div class="container cabecalho-flex">
             <div class="logo">
@@ -27,8 +27,8 @@
         </div>
     </header>
 
-    <!-- HERO SECTION - LAYOUT COM DEPOIMENTO EM DESTAQUE (formato único) -->
-    <section class="hero-familia">
+    <!-- HERO SECTION -->
+    <section class="hero-familia" style="background: linear-gradient(135deg, var(--bege-claro) 0%, #F5F0ED 100%), url('../imagens/hero-bg.jpg'); background-blend-mode: overlay; background-size: cover; background-position: center;">
         <div class="container">
             <div class="hero-familia-grid">
                 <div class="hero-familia-conteudo">
@@ -45,7 +45,7 @@
                         <i class="fa-solid fa-quote-left"></i>
                         <p>"O Dr. Samuel conduziu meu divórcio com muita humanidade. Conseguiu preservar a relação com meu ex-marido e garantir a guarda compartilhada que eu queria."</p>
                         <div class="depoimento-autor">
-                            <img src="imagens/depoimento-1.JPEG" alt="Foto de cliente" class="depoimento-foto">
+                            <img src="imagens/icone sem foto.jpg" alt="Foto de cliente" class="depoimento-foto">
                             <div>
                                 <strong>Maria Clara S.</strong>
                                 <span>Guarda compartilhada</span>
@@ -71,12 +71,31 @@
         </div>
     </section>
 
-    <!-- SEÇÃO SOBRE - COM FOCO EM FAMÍLIA (layout diferente) -->
+    <!-- SEÇÃO SOBRE - COM FOTO DO ADVOGADO -->
     <section id="sobre" class="sobre-familia">
         <div class="container">
             <div class="sobre-familia-header">
-                <h2>Entendemos a <span class="destaque-dourado">complexidade</span> das relações familiares</h2>
-                <p>Mais do que questões jurídicas, lidamos com vidas, emoções e o futuro de famílias inteiras.</p>
+                <h2>Conheça <span class="destaque-dourado">Dr. Samuel Santos</span></h2>
+                <p>Mais de 15 anos dedicados ao Direito de Família com excelência e humanidade.</p>
+            </div>
+            <div class="sobre-advogado-grid">
+                <div class="sobre-advogado-foto">
+                    <img src="imagens/IMG_8784.JPEG" alt="Dr. Samuel Santos" class="advogado-img">
+                </div>
+                <div class="sobre-advogado-texto">
+                    <p>Especialista em Direito de Família e Sucessões, com atuação focada na resolução pacífica de conflitos e na preservação das relações familiares. Acreditamos que o Direito deve ser um instrumento de transformação positiva na vida das pessoas.</p>
+                    <p>Nossa abordagem combina técnica jurídica apurada com acolhimento humano, buscando sempre a melhor solução para cada família.</p>
+                    <div class="sobre-credenciais">
+                        <div class="credencial-item">
+                            <i class="fa-solid fa-gavel"></i>
+                            <span>OAB/XX 123.456</span>
+                        </div>
+                        <div class="credencial-item">
+                            <i class="fa-solid fa-certificate"></i>
+                            <span>Especialista em Família</span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="sobre-familia-grid">
                 <div class="sobre-familia-card">
@@ -104,7 +123,7 @@
         </div>
     </section>
 
-    <!-- SEÇÃO DE ÁREAS DE ATUAÇÃO - GRID 2x2 COM ÍCONES (formato novo) -->
+    <!-- SEÇÃO DE ÁREAS DE ATUAÇÃO -->
     <section id="atuacao" class="areas-atuacao">
         <div class="container">
             <div class="areas-atuacao-header">
@@ -148,7 +167,7 @@
         </div>
     </section>
 
-    <!-- SEÇÃO DE PROCESSO - TIMELINE VERTICAL (formato diferente das anteriores) -->
+    <!-- SEÇÃO DE PROCESSO -->
     <section class="processo-familia">
         <div class="container">
             <h2 class="processo-titulo">Como <span class="destaque-dourado">conduzimos</span> seu caso</h2>
@@ -193,7 +212,7 @@
         </div>
     </section>
 
-    <!-- SEÇÃO CALCULADORA DE PENSÃO (interativa com cards) -->
+    <!-- SEÇÃO CALCULADORA DE PENSÃO -->
     <section id="calculadora" class="calculadora-pensao">
         <div class="container">
             <div class="calculadora-grid">
@@ -234,7 +253,7 @@
         </div>
     </section>
 
-    <!-- SEÇÃO DE DÚVIDAS - FORMATO DE ABAS (novo) -->
+    <!-- SEÇÃO DE DÚVIDAS -->
     <section class="duvidas-familia">
         <div class="container">
             <h2 class="duvidas-titulo">Respostas para suas <span class="destaque-dourado">dúvidas</span></h2>
@@ -269,7 +288,7 @@
                             </div>
                             <div class="faq-item">
                                 <h4>Como definir a guarda unilateral?</h4>
-                                <p>Quando um dos geniores não tem condições ou interesse em exercer a guarda, ou quando há conflito grave.</p>
+                                <p>Quando um dos genitores não tem condições ou interesse em exercer a guarda, ou quando há conflito grave.</p>
                             </div>
                             <div class="faq-item">
                                 <h4>Filho pode escolher com quem ficar?</h4>
@@ -298,13 +317,13 @@
         </div>
     </section>
 
-    <!-- SEÇÃO DE CASOS REAIS - CARDS COM RESULTADOS -->
+    <!-- SEÇÃO DE CASOS REAIS -->
     <section class="casos-reais">
         <div class="container">
             <h2 class="casos-titulo">Casos que <span class="destaque-dourado">transformamos</span></h2>
             <div class="casos-reais-grid">
                 <div class="caso-real-card">
-                    <div class="caso-real-header">
+                    <div class="caso-real-header" style="background-image: linear-gradient(rgba(2, 72, 151, 0.9), rgba(2, 72, 151, 0.9)), url('imagens/foto-advogado.JPEG'); background-size: cover; background-position: center;">
                         <span class="caso-real-categoria">Pensão</span>
                     </div>
                     <p class="caso-real-descricao">"Conseguimos redução de 30% para 18% da renda, mantendo o bem-estar dos filhos e a saúde financeira do pai."</p>
@@ -314,7 +333,7 @@
                     </div>
                 </div>
                 <div class="caso-real-card">
-                    <div class="caso-real-header">
+                    <div class="caso-real-header" style="background-image: linear-gradient(rgba(2, 72, 151, 0.9), rgba(2, 72, 151, 0.9)), url('imagens/IMG_8779.JPEG'); background-size: cover; background-position: center;">
                         <span class="caso-real-categoria">Guarda</span>
                     </div>
                     <p class="caso-real-descricao">"Pai obteve guarda compartilhada com convivência ampliada, antes restrita a finais de semana alternados."</p>
@@ -324,7 +343,7 @@
                     </div>
                 </div>
                 <div class="caso-real-card">
-                    <div class="caso-real-header">
+                    <div class="caso-real-header" style="background-image: linear-gradient(rgba(2, 72, 151, 0.9), rgba(2, 72, 151, 0.9)), url('imagens/decisao-judicial.JPEG'); background-size: cover; background-position: center;">
                         <span class="caso-real-categoria">Divórcio</span>
                     </div>
                     <p class="caso-real-descricao">"Divórcio consensual concluído em 5 dias, com partilha justa e preservação do relacionamento para criação dos filhos."</p>
@@ -337,7 +356,7 @@
         </div>
     </section>
 
-    <!-- CTA FINAL - FORMATO ESPECIAL COM BACKGROUND -->
+    <!-- CTA FINAL -->
     <section id="contato" class="cta-final-familia">
         <div class="container">
             <div class="cta-final-conteudo">
@@ -353,7 +372,7 @@
         </div>
     </section>
 
-    <!-- RODAPÉ (mantido) -->
+    <!-- RODAPÉ -->
     <footer class="rodape">
         <div class="container">
             <div class="rodape-info">
@@ -365,7 +384,7 @@
         </div>
     </footer>
 
-    <!-- WHATSAPP FLOAT (mantido) -->
+    <!-- WHATSAPP FLOAT -->
     <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">
         <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.264 8.264 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23z'/%3E%3Cpath d='M16.15 13.4c-.24-.12-1.43-.71-1.65-.79-.22-.08-.38-.12-.54.12-.16.24-.63.79-.77.95-.14.16-.29.18-.53.06-.24-.12-1.01-.37-1.92-1.18-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.29.36-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.48-.4-.42-.55-.43h-.47c-.16 0-.42.06-.64.3-.22.24-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.16 1.73 2.64 4.19 3.62.59.23 1.05.37 1.41.47.59.16 1.13.14 1.56.09.48-.06 1.48-.61 1.69-1.2.21-.59.21-1.1.15-1.21-.06-.11-.22-.17-.46-.29z'/%3E%3C/svg%3E" alt="WhatsApp">
     </a>

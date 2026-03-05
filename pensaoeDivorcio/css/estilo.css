@@ -1,10 +1,10 @@
-/* ===== VARIÁVEIS (MANTIDAS) ===== */
+/* ===== VARIÁVEIS ===== */
 :root {
     --bege-claro: #DDD3D1;
-    --azul-petroleo: #2F3E46;
-    --dourado-met: #C6A65B;
+    --azul-petroleo: #024897;
+    --dourado-met: #be8705;
     --dourado-escuro: #9C7C3A;
-    --cinza-medio: #8E8A87;
+    --cinza-medio: #000000;
     --branco: #FFFFFF;
     --preto-suave: #333333;
 }
@@ -35,7 +35,7 @@ h1, h2, h3, h4 {
     padding: 0 20px;
 }
 
-/* ===== CABEÇALHO (MANTIDO) ===== */
+/* ===== CABEÇALHO ===== */
 .cabecalho {
     background-color: var(--branco);
     border-bottom: 1px solid var(--bege-claro);
@@ -89,7 +89,7 @@ h1, h2, h3, h4 {
     color: var(--branco);
 }
 
-/* ===== BOTÕES (MANTIDOS) ===== */
+/* ===== BOTÕES ===== */
 .btn-whatsapp {
     display: inline-block;
     background-color: #25D366;
@@ -131,10 +131,9 @@ h1, h2, h3, h4 {
     font-size: 1.3rem;
 }
 
-/* ===== HERO FAMÍLIA (NOVO) ===== */
+/* ===== HERO FAMÍLIA ===== */
 .hero-familia {
     padding: 60px 0;
-    background: linear-gradient(135deg, var(--bege-claro) 0%, #F5F0ED 100%);
     position: relative;
     overflow: hidden;
 }
@@ -282,7 +281,7 @@ h1, h2, h3, h4 {
     color: var(--cinza-medio);
 }
 
-/* ===== SOBRE FAMÍLIA (NOVO) ===== */
+/* ===== SOBRE FAMÍLIA ===== */
 .sobre-familia {
     padding: 80px 0;
     background: var(--branco);
@@ -303,6 +302,56 @@ h1, h2, h3, h4 {
 .sobre-familia-header p {
     font-size: 1.2rem;
     color: var(--cinza-medio);
+}
+
+.sobre-advogado-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 60px;
+    background: #F9F7F6;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.sobre-advogado-foto {
+    text-align: center;
+}
+
+.advogado-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 5%;
+    border: 4px solid var(--dourado-met);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+.sobre-advogado-texto p {
+    color: var(--azul-petroleo);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.sobre-credenciais {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.credencial-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--dourado-escuro);
+    font-weight: 500;
+}
+
+.credencial-item i {
+    color: var(--dourado-met);
+    font-size: 1.2rem;
 }
 
 .sobre-familia-grid {
@@ -353,7 +402,7 @@ h1, h2, h3, h4 {
     line-height: 1.6;
 }
 
-/* ===== ÁREAS DE ATUAÇÃO (GRID 2x2) ===== */
+/* ===== ÁREAS DE ATUAÇÃO ===== */
 .areas-atuacao {
     padding: 80px 0;
     background: linear-gradient(135deg, var(--bege-claro) 0%, #F5F0ED 100%);
@@ -444,7 +493,7 @@ h1, h2, h3, h4 {
     color: var(--dourado-escuro);
 }
 
-/* ===== PROCESSO (TIMELINE VERTICAL) ===== */
+/* ===== PROCESSO ===== */
 .processo-familia {
     padding: 80px 0;
     background: var(--branco);
@@ -577,11 +626,29 @@ h1, h2, h3, h4 {
     text-align: center;
     border: 1px solid var(--bege-claro);
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .card-pensao:hover {
     border-color: var(--dourado-met);
     transform: scale(1.02);
+}
+
+.card-pensao-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.card-pensao i, .card-pensao h4, .card-pensao p {
+    position: relative;
+    z-index: 1;
 }
 
 .card-pensao i {
@@ -601,7 +668,7 @@ h1, h2, h3, h4 {
     color: var(--cinza-medio);
 }
 
-/* ===== DÚVIDAS FAMÍLIA (TABS) ===== */
+/* ===== DÚVIDAS FAMÍLIA ===== */
 .duvidas-familia {
     padding: 80px 0;
     background: var(--branco);
@@ -712,15 +779,19 @@ h1, h2, h3, h4 {
 }
 
 .caso-real-header {
-    background: var(--azul-petroleo);
-    padding: 15px 20px;
+    padding: 30px 20px;
+    text-align: center;
 }
 
 .caso-real-categoria {
     color: var(--dourado-met);
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     letter-spacing: 1px;
+    background: rgba(255,255,255,0.2);
+    padding: 5px 15px;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
 }
 
 .caso-real-descricao {
@@ -795,7 +866,7 @@ h1, h2, h3, h4 {
     margin-top: 20px;
 }
 
-/* ===== RODAPÉ (MANTIDO) ===== */
+/* ===== RODAPÉ ===== */
 .rodape {
     background-color: var(--azul-petroleo);
     color: var(--branco);
@@ -821,7 +892,7 @@ h1, h2, h3, h4 {
     padding-top: 20px;
 }
 
-/* ===== WHATSAPP FLOAT (MANTIDO) ===== */
+/* ===== WHATSAPP FLOAT ===== */
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
@@ -850,6 +921,15 @@ h1, h2, h3, h4 {
 
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 992px) {
+    .sobre-advogado-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .sobre-credenciais {
+        justify-content: center;
+    }
+    
     .sobre-familia-grid,
     .areas-grid,
     .casos-reais-grid {
@@ -920,5 +1000,10 @@ h1, h2, h3, h4 {
     
     .cta-final-conteudo h2 {
         font-size: 2rem;
+    }
+    
+    .sobre-credenciais {
+        flex-direction: column;
+        align-items: center;
     }
 }

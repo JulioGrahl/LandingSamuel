@@ -1,10 +1,10 @@
 /* ===== VARIÁVEIS ===== */
 :root {
     --bege-claro: #DDD3D1;
-    --azul-petroleo: #2F3E46;
-    --dourado-met: #C6A65B;
+    --azul-petroleo: #024897;
+    --dourado-met: #be8705;
     --dourado-escuro: #9C7C3A;
-    --cinza-medio: #8E8A87;
+    --cinza-medio: #000000;
     --branco: #FFFFFF;
     --preto-suave: #333333;
 }
@@ -128,32 +128,113 @@ h1, h2, h3, h4 {
 
 /* ===== NOVO HERO ===== */
 .hero-novo {
-    padding: 60px 0;
+    padding: 80px 0;
     background: linear-gradient(135deg, #F5F0ED 0%, var(--bege-claro) 100%);
     overflow: hidden;
 }
 
 .hero-novo-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 70px;
     align-items: center;
 }
 
+/* IMAGEM */
 .hero-novo-imagem {
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .img-hero-novo {
     width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 30px 40px -20px rgba(0,0,0,0.3);
-    transform: scale(1.02);
-    transition: transform 0.3s ease;
+    max-width: 520px;
+    height: 680px;
+    object-fit: cover;
+    object-position: center 25%; /* AJUSTE FINO AQUI */
+    border-radius: 24px;
+    box-shadow: 0 40px 70px -20px rgba(0,0,0,0.25);
+    transition: transform 0.4s ease;
+    object-position: center 60%;
 }
 
 .img-hero-novo:hover {
-    transform: scale(1.05);
+    transform: translateY(-6px) scale(1.02);
+}
+
+/* ===== AJUSTES MOBILE (HERO NOVO) ===== */
+@media (max-width: 992px) {
+    .hero-novo {
+        padding: 40px 0; /* Reduz o respiro excessivo no topo */
+    }
+
+    .hero-novo-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 30px; /* Espaço entre texto e imagem */
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    /* Garante que o texto venha PRIMEIRO no mobile */
+    .hero-novo-conteudo {
+        order: 1;
+        padding-right: 0;
+    }
+
+    /* Imagem vem DEPOIS */
+    .hero-novo-imagem {
+        order: 2;
+        width: 100%;
+        max-width: 320px; /* Tamanho mais próximo da sua captura */
+        margin: 0 auto;
+    }
+
+    .img-hero-novo {
+        height: 400px; /* Altura ajustada para mobile */
+        object-position: center top; /* Foca no rosto do advogado */
+        object-position: center 60%;
+    }
+
+    /* Ajuste do selo "Especialista em planos de saúde" no mobile */
+    .hero-novo-destaque {
+        bottom: 20px;
+        right: 0;
+        left: 0;
+        margin: 0 ;
+        width: fit-content;
+        font-size: 0.9rem;
+        padding: 10px 20px;
+        white-space: nowrap;
+    }
+
+    /* Ajuste dos stats para não ocuparem muito espaço vertical */
+    .hero-novo-stats {
+        flex-direction: row; /* Mantém lado a lado se couber */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .stat-item {
+        min-width: 100px;
+    }
+
+    .stat-numero {
+        font-size: 1.6rem;
+    }
+
+    /* Centraliza o botão de WhatsApp */
+    .hero-novo-cta {
+        align-items: center;
+    }
+
+    .btn-whatsapp {
+        width: 100%;
+        max-width: 300px;
+    }
 }
 
 .hero-novo-destaque {
@@ -170,7 +251,7 @@ h1, h2, h3, h4 {
 }
 
 .hero-novo-conteudo {
-    padding-right: 20px;
+    padding-right: 10px;
 }
 
 .hero-novo-tag {
@@ -201,7 +282,7 @@ h1, h2, h3, h4 {
 
 .hero-novo-texto {
     font-size: 1.2rem;
-    color: var(--cinza-medio);
+    color: var(--preto-suave);
     margin-bottom: 30px;
     line-height: 1.6;
 }
@@ -226,7 +307,7 @@ h1, h2, h3, h4 {
 
 .stat-label {
     font-size: 0.9rem;
-    color: var(--cinza-medio);
+    color: var(--preto-suave);
 }
 
 .hero-novo-cta {
@@ -237,7 +318,7 @@ h1, h2, h3, h4 {
 
 .hero-novo-nota {
     font-size: 0.95rem;
-    color: var(--cinza-medio);
+    color: var(--preto-suave);
     font-style: italic;
 }
 
@@ -261,7 +342,7 @@ h1, h2, h3, h4 {
 
 .problemas-subtitulo {
     font-size: 1.2rem;
-    color: var(--cinza-medio);
+    color: var(--preto-suave);
     line-height: 1.6;
 }
 
@@ -313,7 +394,7 @@ h1, h2, h3, h4 {
 }
 
 .problema-conteudo p {
-    color: var(--cinza-medio);
+    color: var(--preto-suave);
     line-height: 1.5;
     font-size: 0.95rem;
 }
@@ -381,7 +462,7 @@ h1, h2, h3, h4 {
 }
 
 .sobre-novo-texto > p {
-    color: var(--cinza-medio);
+    color: var(--v);
     margin-bottom: 25px;
     line-height: 1.7;
 }
@@ -448,7 +529,7 @@ h1, h2, h3, h4 {
 
 .timeline-subtitulo {
     text-align: center;
-    color: var(--cinza-medio);
+    color: var(--preto-suave);
     font-size: 1.2rem;
     margin-bottom: 50px;
 }
@@ -513,7 +594,7 @@ h1, h2, h3, h4 {
 }
 
 .timeline-conteudo p {
-    color: var(--cinza-medio);
+    color: var(--preto-suave);
     font-size: 0.95rem;
     line-height: 1.5;
 }
@@ -581,7 +662,7 @@ h1, h2, h3, h4 {
 
 .caso-card p {
     padding: 0 20px 20px;
-    color: var(--cinza-medio);
+    color: var(--preto-suave);
     line-height: 1.5;
 }
 
@@ -632,7 +713,7 @@ h1, h2, h3, h4 {
 }
 
 .faq-duplo-info p {
-    color: var(--cinza-medio);
+    color: var(--preto-suave);
     margin-bottom: 30px;
     line-height: 1.6;
 }
